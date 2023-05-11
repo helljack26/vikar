@@ -1,0 +1,13 @@
+.main_border {
+    border: 1px solid #8ec340; /* Параметры границы */
+    padding: 10px; /* Поля вокруг текста */
+    color: rgba(0, 0, 0, 0.915);
+    font-size: 14px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}/*#DIV_1*/
+.text-inside {
+    padding: 10px;
+}
+.text-inside-second-col {
+    float: right;
+}

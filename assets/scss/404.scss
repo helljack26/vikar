@@ -1,0 +1,137 @@
+@import "../scss/variables";
+@import "../scss/mixin";
+
+body {
+  background-color: $cBody;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .notFound_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 33px;
+    width: 900px;
+
+    @media screen and (max-width: 992px) {
+      width: 92vw;
+    }
+
+    @media screen and (max-width: 768px) {
+      row-gap: 25px;
+    }
+
+    h1 {
+      color: $cGreen;
+      font-weight: bold;
+      font-size: 50px;
+      margin: 0;
+      text-align: center;
+
+      @media screen and (max-width: 992px) {
+        font-size: 45px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 40px;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 35px;
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 32px;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 30px;
+      }
+    }
+
+    .notFound_block_round {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background-color: $cGreen;
+
+      @media screen and (max-width: 992px) {
+        width: 290px;
+        height: 290px;
+      }
+
+      @media screen and (max-width: 576px) {
+        width: 265px;
+        height: 265px;
+      }
+
+      @media screen and (max-width: 450px) {
+        width: 240px;
+        height: 240px;
+      }
+
+      span {
+        font-size: 160px;
+        color: white;
+        font-weight: bold;
+
+        @media screen and (max-width: 992px) {
+          font-size: 150px;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 140px;
+        }
+
+        @media screen and (max-width: 450px) {
+          font-size: 120px;
+        }
+      }
+    }
+
+    span {
+      @include plainText20;
+      color: #737373;
+      font-size: 26px;
+      text-align: center;
+      padding: 0px 4vw;
+
+      @media screen and (max-width: 1366px) {
+        font-size: 25px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+        padding: 0;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 18px;
+      }
+    }
+
+    a {
+      @include greenButton;
+
+      @media screen and (max-width: 400px) {
+        width: 100%;
+      }
+    }
+  }
+}

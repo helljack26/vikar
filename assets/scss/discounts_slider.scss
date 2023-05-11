@@ -1,0 +1,756 @@
+@import "../scss/variables";
+@import "../scss/mixin";
+
+.discount_container {
+  @include mainContainer;
+
+  @media screen and (min-width: 1940px) {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    width: 100%;
+  }
+
+  margin-top: 40px;
+  margin-bottom: 80px;
+  z-index: 100000;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid $cBorderGray;
+
+  @media screen and (max-width: 1170px) {
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
+
+  @media screen and (max-width: 992px) {
+    margin-bottom: 0px;
+    order: 2;
+  }
+
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+
+
+  .discount_container_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 21px 0px;
+    padding-left: 55px;
+
+    @media screen and (max-width: 1400px) {
+      padding: 17px 0px;
+      padding-left: 35px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      padding: 13px 0px;
+      padding-left: 25px;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding: 15px 0px;
+      padding-left: 25px;
+    }
+
+    .discount_container_header_text {
+      @include headerText30;
+    }
+
+    a {
+      @include headerText30;
+      position: relative;
+      display: flex;
+      margin-right: 30px;
+      padding-right: 45px;
+
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+
+      &::before {
+        width: 25px;
+        height: 25px;
+        mask-size: 25px 25px;
+        mask: url(../icon/arrow_icon.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: black;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        transform: rotate(-90deg);
+        content: "";
+
+        @media screen and (max-width: 1400px) {
+          top: 7px;
+        }
+
+        @media screen and (max-width: 1100px) {
+          top: 5px;
+        }
+      }
+    }
+  }
+
+  .discount_slider {
+    border-top: 1px solid $cBorderGray;
+    border-bottom: 1px solid $cBorderGray;
+    width: 100%;
+  }
+
+  .discount_slider_item {
+    padding: 15px;
+    padding-bottom: 80px;
+    border-right: 1px solid $cBorderGray;
+    height: 100%;
+    position: relative;
+
+    @media screen and (max-width: 576px) {
+      padding-bottom: 70px;
+    }
+
+    .discount_slider_item_disabled {
+      opacity: 0.5;
+    }
+
+    .discount_slider_item_discount {
+      position: absolute;
+      top: 0px;
+      right: 15px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: $cRed;
+      padding: 6px 13px;
+      z-index: 10;
+
+      @media screen and (max-width: 450px) {
+        font-size: 14px;
+        padding: 4px 10px;
+      }
+    }
+
+
+
+    .discount_slider_item_image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+      padding: 5px;
+
+      &::after {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        display: flex;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: $cGreen;
+        opacity: 0;
+        visibility: hidden;
+        cursor: pointer;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0.2;
+          visibility: visible;
+        }
+      }
+
+      a {
+        img {
+          max-width: 100%;
+          width: fit-content;
+          max-height: 210px;
+          object-fit: contain;
+
+          @media screen and (max-width: 768px) {
+            max-width: 90%;
+            margin: 0 auto;
+          }
+
+          @media screen and (max-width: 576px) {
+            max-width: 100%;
+            max-height: 140px;
+          }
+
+          @media screen and (max-width: 450px) {
+            max-height: 120px;
+          }
+
+          @media screen and (max-width: 375px) {
+            max-height: 100px;
+          }
+        }
+      }
+    }
+
+    .discount_slider_item_info_reviews {
+      padding: 15px 0px;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 20px;
+
+      @media screen and (max-width: 1400px) {
+        column-gap: 15px;
+        padding: 10px 0px;
+        padding-top: 15px;
+      }
+
+      @media screen and (max-width: 576px) {
+        flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: 450px) {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .reviews {
+        a {
+          color: $cTextBlackSecondary;
+          font-size: 16px;
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          column-gap: 7px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: $cGreen;
+          }
+
+          @media screen and (max-width: 576px) {
+            font-size: 14px;
+          }
+
+          @media screen and (max-width: 450px) {
+            font-size: 12px;
+          }
+
+          @media screen and (max-width: 375px) {
+            font-size: 11px;
+          }
+
+          .content_info_reviews_icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+              mask: url(../icon/leave_review_star_icon.svg);
+              mask-size: contain;
+              mask-repeat: no-repeat;
+              mask-position: center;
+              width: 16px;
+              height: 16px;
+              background-color: $cTextBlackSecondary;
+              content: "";
+              transition: all 0.3s ease-in-out;
+              margin-top: -2px;
+            }
+          }
+
+          &:hover>.content_info_reviews_icon {
+            &::before {
+              background-color: $cGreen;
+            }
+          }
+        }
+      }
+    }
+
+    .discount_slider_item_info {
+      .discount_slider_item_info_name {
+        margin: 0px;
+
+        @media screen and (max-width: 576px) {
+          line-height: 100%;
+        }
+
+        a {
+          line-height: 140%;
+          color: $cTextBlackMain;
+          font-size: 20px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: $cGreen;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 18px;
+          }
+
+          @media screen and (max-width: 576px) {
+            font-size: 16px;
+            line-height: 100%;
+          }
+
+          @media screen and (max-width: 450px) {
+            font-size: 14px;
+          }
+
+          @media screen and (max-width: 375px) {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .discount_slider_item_info_code {
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        color: $cTextBlackSecondary;
+        font-size: 18px;
+
+        @media screen and (max-width: 1400px) {
+          padding-top: 8px;
+          padding-bottom: 10px;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 14px;
+          padding-bottom: 6px;
+        }
+
+        @media screen and (max-width: 450px) {
+          font-size: 12px;
+          padding-bottom: 4px;
+        }
+
+        @media screen and (max-width: 375px) {
+          font-size: 11px;
+        }
+
+        span {
+          white-space: nowrap;
+        }
+      }
+
+      .discount_slider_item_info_price {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+
+        @media screen and (max-width: 1400px) {
+          padding-top: 5px;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 14px;
+          padding-top: 3px;
+        }
+
+        @media screen and (max-width: 450px) {
+          font-size: 12px;
+          padding-top: 2px;
+        }
+
+        @media screen and (max-width: 1400px) {
+          row-gap: 2px;
+        }
+
+        .discount_slider_item_info_price_discount {
+          font-size: 20px;
+          color: $cTextBlackMain;
+          position: relative;
+          width: fit-content;
+
+          @media screen and (max-width: 1200px) {
+            font-size: 18px;
+          }
+
+          @media screen and (max-width: 576px) {
+            font-size: 14px;
+          }
+
+          // Line strike
+          span {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            z-index: 10;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            content: "";
+
+            &::after {
+              position: absolute;
+              top: 13px;
+              right: 0px;
+              width: 100%;
+              height: 2px;
+              background-color: $cRed;
+              content: "";
+              transform: rotate(-5deg);
+
+              @media screen and (max-width: 1200px) {
+                top: 10px;
+              }
+            }
+          }
+        }
+
+        .discount_slider_item_info_price_text {
+          color: $cRed;
+          font-size: 34px;
+
+          @media screen and (max-width: 1400px) {
+            font-size: 30px;
+          }
+
+          @media screen and (max-width: 1200px) {
+            font-size: 28px;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 25px;
+          }
+
+          @media screen and (max-width: 576px) {
+            font-size: 22px;
+          }
+
+          @media screen and (max-width: 450px) {
+            font-size: 20px;
+          }
+
+          @media screen and (max-width: 400px) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .discount_slider_item_info_link {
+        background-color: #a8a8a8;
+        padding: 10px 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        transition: all 0.3s ease-in-out;
+
+        @media screen and (max-width: 450px) {
+          margin-top: 15px;
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 375px) {
+          font-size: 14px;
+        }
+
+        &:hover {
+          background-color: $cGreenHover;
+          color: whitesmoke;
+        }
+      }
+    }
+
+    .discount_slider_item_footer {
+      position: absolute;
+      left: 0px;
+      bottom: 15px;
+      right: 0px;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      padding: 0px 15px;
+      column-gap: 10px;
+
+      @media screen and (max-width: 576px) {
+        height: 40px;
+      }
+
+      .discount_slider_item_footer_basket {
+        background-color: $cGreen;
+        padding: 0px 15px;
+        width: 78%;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+        transition: all 0.3s ease-in-out;
+
+        @media screen and (max-width: 576px) {
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 450px) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 400px) {
+          font-size: 13px;
+          font-weight: normal;
+          padding: 0px 10px;
+
+        }
+
+        @media screen and (max-width: 375px) {
+          font-size: 12px;
+        }
+
+        &:hover {
+          background-color: $cGreenHover;
+          color: whitesmoke;
+        }
+      }
+
+      .discount_slider_item_footer_basket_active {
+        background-color: #679500;
+        color: #ffcd00;
+      }
+
+      .discount_slider_item_footer_isAvailable {
+        padding: 0px 5px;
+        width: 78%;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        outline: 1px solid $cGreen;
+        @include plainText18;
+        text-align: center;
+        line-height: 100%;
+        white-space: normal;
+
+        @media screen and (max-width: 600px) {
+          font-size: 15px;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-weight: normal;
+          font-size: 14px;
+        }
+
+        color: $cGreen;
+      }
+
+      .results_item_content_info_wishList {
+        width: 18%;
+        min-width: 50px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        content: "";
+        border: none;
+        background-color: $cGreen;
+        transition: all 0.3s ease-in-out;
+        user-select: none;
+        position: relative;
+
+        &:hover {
+          background-color: $cGreenHover;
+        }
+
+        // &:hover > .results_item_content_info_wishList_icon {
+        //   background-color: $cRed;
+        // }
+        // &:hover > .results_item_content_info_wishList_icon_active {
+        //   background-color: $cRedHover;
+        // }
+        @media screen and (max-width: 576px) {
+          width: 14%;
+          min-width: 40px;
+        }
+
+        .results_item_content_info_wishList_icon {
+          width: 23px;
+          height: 23px;
+          mask-size: 20px 20px;
+          mask-repeat: no-repeat;
+          mask-position: center;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          mask: url(../icon/вибране.svg);
+          content: "";
+          pointer-events: none;
+          transition: all 0.3s ease-in-out;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          @media screen and (max-width: 576px) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        .results_item_content_info_wishList_icon_active {
+          background-color: $cRed;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    margin: 0;
+    padding: 1rem 20px;
+    list-style-type: none;
+    position: absolute;
+    left: -1px;
+    bottom: -40px;
+    right: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid $cBorderGray;
+    background-color: white;
+    overflow: hidden;
+
+    @media screen and (max-width: 576px) {
+      bottom: -25px;
+      padding: 7px 20px;
+    }
+
+    li {
+      margin: 0 15px;
+
+      @media screen and (max-width: 576px) {
+        margin: 0px 7px;
+      }
+    }
+
+    button {
+      display: block;
+      width: 18px;
+      height: 18px;
+      padding: 0;
+      transition: all 0.3s ease-in-out;
+      border: none;
+      border-radius: 100%;
+      background-color: #d7d7d7;
+      text-indent: -9999px;
+
+      @media screen and (max-width: 576px) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    li.slick-active button {
+      transition: all 0.3s ease-in-out;
+      background-color: $cGreen;
+    }
+  }
+}
+
+.discount_container_footer {
+  display: none;
+
+  @media screen and (max-width: 992px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin: 0px 30px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 992px) {
+      order: 3;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    margin: 0px 16px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    width: 50%;
+    background-color: white;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+    color: #2d2d2d;
+    border: 1px solid $cBorderGray;
+    border-top: 1px solid transparent;
+    padding: 10px 0px;
+    padding-left: 10px;
+    padding-right: 45px;
+    text-align: right;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      mask-size: 20px 20px;
+      mask: url(../icon/arrow_icon.svg);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: black;
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      transform: rotate(-90deg);
+      content: "";
+
+      @media screen and (max-width: 768px) {
+        top: 13px;
+      }
+    }
+  }
+}
+
+.slick-track,
+.slick-list {
+  width: 100%;
+  min-width: 100%;
+}

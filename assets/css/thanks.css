@@ -1,0 +1,323 @@
+main {
+  margin: 0px 50px;
+  padding-top: 140px;
+  padding-bottom: 176px;
+}
+@media screen and (min-width: 1940px) {
+  main {
+    margin: 0px auto;
+    max-width: 1820px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  main {
+    margin: 0px 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  main {
+    margin: 0px 16px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  main {
+    padding-top: 105px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main {
+    padding-bottom: 110px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  main {
+    padding-top: 85px;
+  }
+}
+@media screen and (max-width: 992px) {
+  main {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding-bottom: 140px;
+  }
+}
+main .thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+@media screen and (max-width: 1200px) {
+  main .thanks {
+    row-gap: 5px;
+  }
+}
+@media screen and (max-width: 992px) {
+  main .thanks {
+    row-gap: 10px;
+  }
+}
+main .thanks .thanks_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #8ec340;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 1200px) {
+  main .thanks .thanks_icon {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  main .thanks .thanks_icon {
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  main .thanks .thanks_icon {
+    width: 85px;
+    height: 85px;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .thanks .thanks_icon {
+    width: 65px;
+    height: 65px;
+    padding: 15px;
+  }
+}
+main .thanks .thanks_icon img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: invert(1);
+}
+main .thanks h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #2d2d2d;
+  margin: 0;
+  text-align: center;
+}
+@media screen and (max-width: 1600px) {
+  main .thanks h1 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  main .thanks h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 1270px) {
+  main .thanks h1 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 992px) {
+  main .thanks h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .thanks h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .thanks h1 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .thanks h1 {
+    font-size: 30px;
+  }
+}
+main .thanks h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+  color: #212322;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+@media (max-width: 1450px) {
+  main .thanks h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1270px) {
+  main .thanks h2 {
+    font-size: 27px;
+  }
+}
+@media (max-width: 768px) {
+  main .thanks h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 576px) {
+  main .thanks h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 450px) {
+  main .thanks h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 375px) {
+  main .thanks h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  main .thanks h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .thanks h2 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .thanks h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  main .thanks h2 {
+    font-size: 18px;
+  }
+}
+main .thanks .thanks_texts {
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1200px) {
+  main .thanks .thanks_texts {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+main .thanks .thanks_texts span {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  color: #212322;
+  letter-spacing: 1px;
+  color: #838383;
+  text-align: center;
+  padding: 0px 4vw;
+}
+@media screen and (max-width: 1600px) {
+  main .thanks .thanks_texts span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  main .thanks .thanks_texts span {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1270px) {
+  main .thanks .thanks_texts span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  main .thanks .thanks_texts span {
+    font-size: 18px;
+  }
+}
+@media (max-width: 375px) {
+  main .thanks .thanks_texts span {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  main .thanks .thanks_texts span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .thanks .thanks_texts span {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .thanks .thanks_texts span {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .thanks .thanks_texts span {
+    font-size: 14px;
+  }
+}
+main .thanks a {
+  padding: 15px 30px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 18px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: none;
+  white-space: nowrap;
+  background-color: #8ec340;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+main .thanks a:hover {
+  background-color: #81a944;
+  cursor: pointer;
+}
+main .thanks a:focus-visible {
+  outline: 3px solid #ffcd00 !important;
+  border-radius: 3px;
+}
+main .thanks a:hover {
+  background-color: #81a944;
+}
+@media screen and (max-width: 1100px) {
+  main .thanks a {
+    font-size: 15px;
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .thanks a {
+    width: 100%;
+  }
+}

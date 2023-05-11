@@ -1,0 +1,68 @@
+.btn {
+  background: #a8a8a8 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  font-size: 13px;
+  line-height: 22px;
+  transition: all 0.2s linear 0s;
+}
+
+.mob {
+  display: none;
+}
+
+#map iframe {
+  width: 100%;
+  height: 400px;
+}
+
+.video iframe {
+  width: 100%;
+  height: 400px;
+}
+
+.video {
+  height: 400px;
+}
+
+@media screen and (max-width: 479px) {
+  .nav_gallery iframe {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.outers {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  margin-left: 25px;
+}
+
+.outers img {
+  width: 200px;
+}
+
+.video_play {
+  cursor: pointer;
+}
+
+.fancybox-content {
+  background: none;
+  padding: 0px;
+}
+
+.fancybox-content img {
+  background: #fff;
+}
+
+.ishop_inf li:hover > .media-body {
+  color: #fff;
+  cursor: pointer;
+}
+
+.ishop_inf li:hover > .media-body a {
+  color: #fff;
+  cursor: pointer;
+}

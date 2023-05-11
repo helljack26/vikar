@@ -1,0 +1,425 @@
+// @collapse;
+@import "./_variables";
+
+@mixin mainContainer {
+  @media screen and (min-width: 1940px) {
+    margin: 0px auto;
+    max-width: 1820px;
+  }
+
+  margin: 0px 50px;
+
+  @media screen and (max-width: 1170px) {
+    margin: 0px 30px;
+  }
+
+  @media screen and (max-width: 576px) {
+    margin: 0px 16px;
+  }
+}
+
+@mixin greenButton {
+  padding: 15px 30px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 18px;
+  user-select: none;
+  border: none;
+  white-space: nowrap;
+  background-color: $cGreen;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $cGreenHover;
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    @include focusVisible;
+  }
+}
+
+@mixin focusVisible {
+  outline: $focusVisibleOutline !important;
+  border-radius: 3px;
+}
+
+@mixin mainInput {
+  width: 100%;
+  padding: 11px;
+  font-size: 17px;
+  color: $cTextBlackMain;
+  font-family: $fRegular;
+  border: none;
+  border: 1px solid $cBorderGray;
+  outline: none;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus {
+    border: 1px solid $cOrange;
+  }
+
+  &:active {
+    border: 1px solid $cOrange;
+  }
+
+  &:hover {
+    border: 1px solid $cOrange;
+  }
+
+  &::placeholder {
+    color: $cTextBlackSecondary;
+  }
+
+  @media screen and (max-width: 1450px) {
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 1050px) {
+    font-size: 17px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 15px;
+  }
+}
+
+//////// Text //////////
+@mixin headerText40 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #2d2d2d;
+  margin: 0;
+
+  @media screen and (max-width: 1600px) {
+    font-size: 38px;
+  }
+
+  @media screen and (max-width: 1450px) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: 1270px) {
+    font-size: 34px;
+  }
+
+  @media screen and (max-width: 992px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 28px;
+  }
+}
+
+@mixin headerText30 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #2d2d2d;
+  margin: 0;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 18px;
+  }
+}
+
+@mixin boldText30 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+  color: $cTextBlackMain;
+  letter-spacing: 1px;
+
+  @media (max-width: 1450px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 1270px) {
+    font-size: 27px;
+  }
+
+  @media (max-width:768px) {
+    font-size: 26px;
+  }
+
+  @media (max-width:576px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
+}
+
+@mixin boldText22 {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 140%;
+  color: $cTextBlackMain;
+  letter-spacing: 1px;
+
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 18px;
+  }
+}
+
+@mixin boldText20 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: $cTextBlackMain;
+  letter-spacing: 1px;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 16px;
+  }
+}
+
+@mixin boldText18 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: $cTextBlackMain;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 14px;
+  }
+}
+
+@mixin plainText22 {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  color: $cTextBlackMain;
+  letter-spacing: 1px;
+
+  @media screen and (max-width: 1600px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 1270px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 17px;
+  }
+}
+
+
+@mixin plainText20 {
+  font-weight: $fw400;
+  font-size: 20px;
+  line-height: 140%;
+  color: $cTextBlackMain;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 16px;
+  }
+}
+
+@mixin plainText18 {
+  font-weight: $fw400;
+  font-size: 18px;
+  line-height: 28px;
+  color: $cTextBlackMain;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 15px;
+  }
+}
+
+@mixin plainText16 {
+  font-weight: $fw400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $cTextBlackMain;
+
+  @media (max-width: 1366px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 13px;
+  }
+}
+
+@mixin plainText14 {
+  font-size: 14px;
+  line-height: 140%;
+  color: $cTextBlackMain;
+  font-weight: normal;
+}
+
+@mixin mainPrice {
+  color: $cRed;
+  font-size: 32px;
+  line-height: 120%;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    font-size: 28px;
+  }
+
+  @media screen and (max-width: 992px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 28px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 26px;
+  }
+}
+
+// Breadcrumbs
+@mixin breadcrumbsText {
+  font-weight: $fw400;
+  line-height: 140% !important;
+  color: $cTextBlackMain;
+  font-size: 16px;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 992px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 11px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 10px;
+  }
+}
+
+// Icon
+@mixin maskIcon {
+  width: 12px;
+  height: 12px;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+@mixin imageContain {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
